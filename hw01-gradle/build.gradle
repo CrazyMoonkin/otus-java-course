@@ -1,0 +1,19 @@
+plugins {
+    id "java"
+    id "com.github.johnrengelman.shadow"
+}
+
+dependencies {
+    implementation("com.google.guava:guava")
+}
+
+shadowJar {
+    archiveBaseName.set('gradleOtusHellowWord')
+    archiveClassifier.set('')
+    archiveVersion.set(project.version.toString())
+    manifest {
+        attributes 'Main-class': 'ru.crazymoonkin.otus.HelloOtus'
+    }
+}
+
+tasks.test.dependsOn shadowJar
