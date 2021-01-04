@@ -3,15 +3,15 @@ package ru.crazymoonkin.otus.collection;
 import java.util.*;
 
 public class DIYarrayList<T> implements List<T> {
-    DIYarrayList(int size) {
-        if (size < 1) {
-            throw new RuntimeException("Size can't be less than 1");
+    public DIYarrayList(int size) {
+        if (size < 0) {
+            throw new RuntimeException("Size can't be less than 0");
         }
 
         elements = (T[]) new Object[size];
     }
 
-    DIYarrayList() {
+    public DIYarrayList() {
         this(DEFAULT_CAPACITY);
     }
 
