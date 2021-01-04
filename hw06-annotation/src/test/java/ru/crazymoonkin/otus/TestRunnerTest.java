@@ -10,18 +10,18 @@ class TestRunnerTest {
     void runSuccessfulTests() {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.SuccessfulTest");
 
-        assertEquals(3, run.runTestCount);
-        assertEquals(3, run.successfulTestCount);
-        assertEquals(0, run.failedTestCount);
+        assertEquals(3, run.getRunTestCount());
+        assertEquals(3, run.getSuccessfulTestCount());
+        assertEquals(0, run.getFailedTestCount());
     }
 
     @Test
     void runTestsWithException() {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.TestWithException");
 
-        assertEquals(3, run.runTestCount);
-        assertEquals(2, run.successfulTestCount);
-        assertEquals(1, run.failedTestCount);
+        assertEquals(3, run.getRunTestCount());
+        assertEquals(2, run.getSuccessfulTestCount());
+        assertEquals(1, run.getFailedTestCount());
     }
 
 
@@ -29,17 +29,17 @@ class TestRunnerTest {
     void beforeWithException() {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.BeforeWithExceptionTest");
 
-        assertEquals(3, run.runTestCount);
-        assertEquals(0, run.successfulTestCount);
-        assertEquals(3, run.failedTestCount);
+        assertEquals(3, run.getRunTestCount());
+        assertEquals(0, run.getSuccessfulTestCount());
+        assertEquals(3, run.getFailedTestCount());
     }
 
     @Test
     void afterWithException() {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.AfterWithExceptionTest");
 
-        assertEquals(3, run.runTestCount);
-        assertEquals(0, run.successfulTestCount);
-        assertEquals(3, run.failedTestCount);
+        assertEquals(3, run.getRunTestCount());
+        assertEquals(0, run.getSuccessfulTestCount());
+        assertEquals(3, run.getFailedTestCount());
     }
 }

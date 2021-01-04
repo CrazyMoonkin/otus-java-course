@@ -10,7 +10,31 @@ public class TestResult {
     private TestResult() {
     }
 
-    int runTestCount;
-    int failedTestCount;
-    int successfulTestCount;
+    private int runTestCount;
+    private int failedTestCount;
+    private int successfulTestCount;
+
+    public int getRunTestCount() {
+        return runTestCount;
+    }
+
+    public void setRunTestCount(int runTestCount) {
+        this.runTestCount = runTestCount;
+    }
+
+    public int getFailedTestCount() {
+        return failedTestCount;
+    }
+
+    public void setFailedTestCount(int failedTestCount) {
+        this.failedTestCount = failedTestCount;
+    }
+
+    public int getSuccessfulTestCount() {
+        return successfulTestCount;
+    }
+
+    public void setSuccessfulTestCount(int successfulTestCount) {
+        this.successfulTestCount = successfulTestCount;
+    }
 }

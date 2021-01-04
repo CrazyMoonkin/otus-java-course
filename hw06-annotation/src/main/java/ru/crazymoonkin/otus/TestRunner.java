@@ -22,9 +22,9 @@ public class TestRunner {
             if (testResult == null) {
                 testResult = new TestResult(0, 0, 0);
             }
-            System.out.println("runTestCount=" + testResult.runTestCount);
-            System.out.println("successfulTestCount=" + testResult.successfulTestCount);
-            System.out.println("failedTestCount=" + testResult.failedTestCount);
+            System.out.println("runTestCount=" + testResult.getRunTestCount());
+            System.out.println("successfulTestCount=" + testResult.getSuccessfulTestCount());
+            System.out.println("failedTestCount=" + testResult.getFailedTestCount());
         }
         return testResult;
     }
