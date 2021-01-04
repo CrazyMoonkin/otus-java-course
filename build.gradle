@@ -17,8 +17,21 @@ allprojects {
     apply plugin: "io.spring.dependency-management"
 
     dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.4.1")
+        }
         dependencies {
             dependency "com.google.guava:guava:$guavaVersion"
+            dependency("org.openjdk.jmh:jmh-core:$jmhVersion")
+            dependency("org.openjdk.jmh:jmh-generator-annprocess:$jmhVersion")
+            dependency("org.openjdk.jol:jol-core:$jolVersion")
+            dependency("org.ow2.asm:asm-commons:$asmVersion")
+            dependency("org.glassfish:javax.json:$glassfishJsonVersion")
+            dependency("com.google.protobuf:protobuf-java-util:$protobufVersion")
+            dependency("org.flywaydb:flyway-core:$flywayVersion")
+            dependency("org.postgresql:postgresql:$postgresqlVersion")
+            dependency("org.testcontainers:junit-jupiter:$testcontainersVersion")
+            dependency("org.testcontainers:postgresql:$testcontainersVersion")
         }
     }
 }
