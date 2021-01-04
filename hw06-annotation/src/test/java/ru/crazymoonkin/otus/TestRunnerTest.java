@@ -29,9 +29,9 @@ class TestRunnerTest {
     void beforeWithException() {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.BeforeWithExceptionTest");
 
-        assertEquals(0, run.runTestCount);
+        assertEquals(3, run.runTestCount);
         assertEquals(0, run.successfulTestCount);
-        assertEquals(0, run.failedTestCount);
+        assertEquals(3, run.failedTestCount);
     }
 
     @Test
@@ -39,7 +39,7 @@ class TestRunnerTest {
         TestResult run = TestRunner.run("ru.crazymoonkin.otus.test.AfterWithExceptionTest");
 
         assertEquals(3, run.runTestCount);
-        assertEquals(3, run.successfulTestCount);
-        assertEquals(0, run.failedTestCount);
+        assertEquals(0, run.successfulTestCount);
+        assertEquals(3, run.failedTestCount);
     }
 }
